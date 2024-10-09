@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css"> -->
+
+</head>
+
+<body>
+    <div class="container">
+
+        <form action="https://api.web3forms.com/submit" method="POST" class="left-conatainer">
+            <input type="hidden" name="access_key" value="9cd906f4-6dfa-4c78-b0e3-1bc5648503dc">
+            <div>
+                <h2>Contact Us</h2>
+                <hr>
+            </div>
+            <input class="input" type="text" name="name" placeholder="Enter your Name" />
+            <input class="input" type="emial" name="email" placeholder="Enter your Email" required />
+            <textarea class="message" name="message" placeholder="Enter your message" id="msg" rows="5" cols="10" required></textarea>
+            <button type="submit" value="Submit">Submit
+                <img src="arrow_icon.png">
+            </button>
+        </form>
+        <div class="right-container">
+            <div id="observablehq-chart-260e76f7"></div>
+        </div>
+</body>
+<script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js"; import define from "https://api.observablehq.com/@d3/disjoint-force-directed-graph.js?v=4"; new Runtime().module(define, name => { if (name === "chart")
+    return new Inspector(document.querySelector("#observablehq-chart-260e76f7")); return ["key"].includes(name); });
+</script>
+
+</html>

@@ -1,0 +1,91 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background: linear-gradient(#878787, #242424);
+        }
+        
+        .container {
+            display: flex;
+            /* border: 4px solid red; */
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .left-conatainer {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 20px;
+        }
+        
+        .left-conatainer h2 {
+            font-weight: 700;
+            font-size: 40px;
+            color: rgb(105, 195, 223);
+            margin-bottom: 5px;
+        }
+        
+        .left-conatainer hr {
+            border: none;
+            width: 109px;
+            background-color: antiquewhite;
+            height: 5px;
+            border-radius: 10px;
+        }
+        
+        .input,
+        textarea {
+            width: 400px;
+            height: 50px;
+            border: 0;
+            outline: none;
+            padding-left: 25px;
+            border-radius: 50px;
+            color: aliceblue;
+            font-weight: 600;
+        }
+        
+        textarea {
+            height: 140px;
+            border-radius: 20px;
+        }
+        
+        .left-conatainer button {
+            border: 0;
+            outline: none;
+            background: linear-gradient(270deg, #ff994f, #fabd86);
+            font-size: 16px;
+            padding: 15px 30px;
+            cursor: pointer;
+            border-radius: 50px;
+            display: flex;
+            align-content: baseline;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        input:focus,
+        textarea:focus {
+            border: 2px solid #ff994f;
+        }
+        
+        .left-conatainer button:hover {
+            filter: brightness(120%);
+            font-weight: 800;
+        }
+        
+        .right-container {
+            width: 500px;
+        }
+        
+        @media(max-width:800px) {
+            .right-container {
+                display: none;
+            }
+        }
