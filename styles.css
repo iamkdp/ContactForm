@@ -8,11 +8,27 @@
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             background: linear-gradient(#878787, #242424);
         }
-        
+        .radiobtn{
+            display: flex;
+            flex-direction:row;
+            gap:10px;
+            
+        }
+        .top-div {
+            position: fixed; /* Fixes the div at the top */
+            top: 0;          /* Positions it at the top of the viewport */
+            left: 0;         /* Aligns it to the left */
+            width: 100%;     /* Makes it span the full width of the viewport */
+            z-index: 1000;   /* Ensures it stays above other content */
+            padding: 10px;   /* Optional: Add some padding */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
+            text-align: center;
+            color: rgb(239, 255, 18);
+          }
         .container {
             display: flex;
             /* border: 4px solid red; */
-            height: 100vh;
+            height: 200vh;
             justify-content: center;
             align-items: center;
         }
@@ -22,32 +38,41 @@
             flex-direction: column;
             align-items: start;
             gap: 20px;
+            width: fit-content;
+             
         }
-        
+        .left-conatainer label{
+            display: flex;
+            color: rgb(239, 255, 18);
+            text-align:justify;
+            font-size: large;
+          
+        }
         .left-conatainer h2 {
             font-weight: 700;
             font-size: 40px;
             color: rgb(105, 195, 223);
-            margin-bottom: 5px;
+            margin-bottom: 1px;
         }
         
         .left-conatainer hr {
             border: none;
-            width: 109px;
+            width: 459px;
             background-color: antiquewhite;
             height: 5px;
             border-radius: 10px;
+
         }
         
         .input,
         textarea {
-            width: 400px;
-            height: 50px;
+            width: 300px;
+            height: 45px;
             border: 0;
             outline: none;
             padding-left: 25px;
             border-radius: 50px;
-            color: aliceblue;
+            color: rgb(0, 0, 0);
             font-weight: 600;
         }
         
@@ -84,7 +109,12 @@
             width: 500px;
         }
         
-        @media(max-width:800px) {
+        @media(max-width:500px) {
+            .left-conatainer
+            {
+                width: 90%;
+                height: 90vh;
+            }
             .right-container {
                 display: none;
             }

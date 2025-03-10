@@ -31,7 +31,8 @@
         </div>
 </body>
 <script type="module">
-    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js"; import define from "https://api.observablehq.com/@d3/disjoint-force-directed-graph.js?v=4"; new Runtime().module(define, name => { if (name === "chart")
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js"; import define from "https://api.observablehq.com/@d3/disjoint-force-directed-graph.js?v=4";
+     new Runtime().module(define, name => { if (name === "chart")
     return new Inspector(document.querySelector("#observablehq-chart-260e76f7")); return ["key"].includes(name); });
 </script>
 
